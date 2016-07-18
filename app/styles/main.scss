@@ -1,93 +1,286 @@
-$icon-font-path: '../fonts/';
-
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+@font-face {
+  font-family: 'RotondaC Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('RotondaC Bold'), url('../fonts/rotondac-bold.woff') format('woff');
 }
 
-/* Space out content a bit */
+@import "vendor/bourbon/bourbon";
+@import "vendor/bootstrap/bootstrap";
+
+
+$rotonda: 'RotondaC Bold';
+$purple: #c13683;
+$green: #329837;
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 100px;
+}
+.vg__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+
+.vg {
+  &__header {
+    padding-top: 5px;
+
+    &__wrap {
+      @include display(flex);
+      @include flex-flow(row nowrap);
+      @include justify-content(space-between);
+    }
+    &__logo {
+      width: 180px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__r {
+      width: 80%;
+    }
+
+    &__top {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    &__bottom {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      border-top: 1px solid rgba(193, 54, 131, 0.2);
+      @include display(flex);
+      @include flex-flow(row nowrap);
+      @include justify-content(space-between);
+      @include align-items(center);
+    }
+
+    &__call, &__hotline, &__exchange, &__login {
+      display: inline-block;
+      color: #000;
+    }
+
+    &__call {
+      margin-right: 70px;
+    }
+
+    &__hotline {
+      margin-right: 125px;
+    }
+
+    &__exchange {
+      margin-right: 90px;
+      span {
+        margin-right: 5px;
+        color: $purple;
+        img {
+          vertical-align: middle;
+          margin-right: 4px;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+
+    &__nav {
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 35px;
+
+          a {
+            font-size: 16px;
+            color: #000;
+            border-bottom: 1px solid rgba(193, 54, 131, 0.2);
+            line-height: 1;
+
+            &:hover, &:focus, &:active {
+              text-decoration: none;
+              border-bottom: 1px solid rgba(193, 54, 131, 1);
+            }
+          }
+        }
+      }
+    }
+
+    &__registercomp {
+      color: $green;
+      text-decoration: underline;
+    }
   }
-}
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+  &__footer {
+    color: #fff;
+    font-size: 13px;
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
+    a {
+      color: #fff;
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+      &:hover, &:active, &:focus {
+        color: #fff;
+      }
+    }
+
+    &__top {
+      height: 50px;
+      background: url('../images/footer-img.png') repeat-x;
+    }
+
+    &__bottom {
+      background-color: $purple;
+      height: 50px;
+      padding-top: 5px;
+
+      .container {
+        position: relative;
+      }
+    }
+
+    &__copy, &__call, &__hotline, &__social {
+      display: inline-block;
+    }
+
+    &__copy {
+      margin-right: 120px;
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    &__call {
+      margin-right: 80px;
+    }
+
+    &__social {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: inline-block;
+          margin-left: 10px;
+
+          a {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
-}
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
+  &__countries {
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    &__wrap {
+      @include display(flex);
+      @include flex-flow(row nowrap);
+      @include justify-content(space-between);
+    }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    &__item {
+      width: 280px;
+      height: 200px;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(193, 54, 131, 0);
+        @include transition(all 0.15s ease-in);
+      }
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+      &:hover {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(193, 54, 131, 0.55);
+        }
+
+        .vg__countries__item-link {
+          @include transform(translate(-50%, 0%));
+          opacity: 1;
+        }
+      }
+
+      & > img {
+        width: 280px;
+        height: 200px;
+      }
+
+      &-details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+
+      &-title {
+        font-size: 38px;
+        font-family: $rotonda;
+        color: #fff;
+      }
+
+      &-extra {
+        color: #fff;
+        font-size: 13px;
+      }
+
+      &-link {
+        position: absolute;
+        color: #fff;
+        font-weight: bold;
+        display: block;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 8px 20px;
+        left: 50%;
+        bottom: 10px;
+        opacity: 0;
+        @include transition(all 0.2s ease-in-out);
+        @include transform(translate(-50%, 130%));
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
   }
 }

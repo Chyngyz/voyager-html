@@ -3,21 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <title>voyager html</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -26,75 +22,148 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">voyager html</h3>
-      </div>
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          
+    <header class="vg__header">
+      <div class="container">
+        <div class="vg__header__wrap">
+          <div class="vg__header__logo">
+            <img src="images/logo.svg" alt="">
+          </div>
+          <!-- /.vg__header__logo -->
+          <div class="vg__header__r">
+            <div class="vg__header__top">
+              <div class="vg__header__call">
+                Call центр: <br><a href="tel:+996312910406">+996 (312) 910-406</a>
+              </div>
+              <div class="vg__header__hotline">
+                Горячая линия: <br><a href="tel:+996550297343">+996 (550) 297-343</a>
+              </div>
+              <div class="vg__header__exchange">
+                Курсы валют на 05.05.2016 <br>
+                <span><img src="images/euro-flag.png" alt="" />74,00 - 75,00</span>
+                <span><img src="images/us-flag.png" alt="">65,00 - 66,00</span>
+              </div>
+              <div class="vg__header__login">
+                Личный кабинет <br><a href="#">Войти</a>
+              </div>
+            </div>
+            <!-- /.vg__header__top -->
+            <div class="vg__header__bottom">
+              <nav class="vg__header__nav">
+                <ul>
+                  <li><a href="#">О Компании</a></li>
+                  <li><a href="#">Страны</a></li>
+                  <li><a href="#">Агентствам</a></li>
+                  <li><a href="#">Туристам</a></li>
+                </ul>
+              </nav>
+              <a href="#" class="vg__header__registercomp">
+                <img src="images/user-icon.png" alt="">Регистрация компании
+              </a>
+            </div>
+            <!-- /.vg__header__bottom -->
+          </div>
+          <!-- /.vg__header__r -->
         </div>
       </div>
+    </header>
+    <!-- /.vg__header -->
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+    <div class="vg__countries">
+      <div class="container">
+        <div class="vg__countries__wrap">
+          <div class="vg__countries__item">
+            <img src="images/country-img_1.jpg" alt="">
+            <div class="vg__countries__item-details">
+              <div class="vg__countries__item-title">Мальдивы</div>
+              <div class="vg__countries__item-extra">
+                <span>12 горячих</span> <br><span>38 всего</span>
+              </div>
+            </div>
+            <a href="#" class="vg__countries__item-link">Показать все</a>
+          </div>
+          <div class="vg__countries__item">
+            <img src="images/country-img_2.jpg" alt="">
+            <div class="vg__countries__item-details">
+              <div class="vg__countries__item-title">Дубаи</div>
+              <div class="vg__countries__item-extra">
+                <span>12 горячих</span> <br><span>38 всего</span>
+              </div>
+            </div>
+            <a href="#" class="vg__countries__item-link">Показать все</a>
+          </div>
+          <div class="vg__countries__item">
+            <img src="images/country-img_3.jpg" alt="">
+            <div class="vg__countries__item-details">
+              <div class="vg__countries__item-title">Париж</div>
+              <div class="vg__countries__item-extra">
+                <span>12 горячих</span> <br><span>38 всего</span>
+              </div>
+            </div>
+            <a href="#" class="vg__countries__item-link">Показать все</a>
+          </div>
+          <div class="vg__countries__item">
+            <img src="images/country-img_4.jpg" alt="">
+            <div class="vg__countries__item-details">
+              <div class="vg__countries__item-title">Италия</div>
+              <div class="vg__countries__item-extra">
+                <span>12 горячих</span> <br><span>38 всего</span>
+              </div>
+            </div>
+            <a href="#" class="vg__countries__item-link">Показать все</a>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+
+    <div class="vg__footer">
+      <div class="vg__footer__top"></div>
+      <div class="vg__footer__bottom">
+        <div class="container">
+          <div class="vg__footer__copy">
+            © 2011 - 2016 Voyage.kg <br><a href="#">Карта сайта</a> |  <a href="#">Пользовательское соглашение</a>
+          </div>
+          <div class="vg__footer__call">
+            Call центр: <br> <a href="#">+996 (312) 910 - 460</a>
+          </div>
+          <div class="vg__footer__hotline">
+            Горячая линия: <br><a href="#">+996 (550) 297 - 343</a>
+          </div>
+          <div class="vg__footer__social">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="images/face-icon.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/twitter-icon.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/youtube-icon.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/insta-icon.svg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.vg__footer -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
